@@ -46,9 +46,12 @@ def bag_of_words(sentence, words):
     return np.array(bag)
 
 
-sentences = ["Machine learning is great","Natural Language Processing is a complex field","Natural Language Processing is used in machine learning"]
+sentences = ["Shawshank Redemption is very inspiring movie and great to watch",
+             "Shindler's List movie touches the soul, always",
+             "All Nolan movies are great but Prestige and Memento are finest among all"]
 vocab = build_vocab(sentences)
-print(vocab)
+print("My Vocab :",vocab)
 
-test_sentence = "Machine learning is complex but great for learning"
-print(bag_of_words(test_sentence,vocab))
+test_sentence = "Lord of the Rings is a great movie, They have touched stories of wide range of fantasy characters"
+print("My test review :",test_sentence)
+print("Single review entry :",bag_of_words(test_sentence,vocab))
